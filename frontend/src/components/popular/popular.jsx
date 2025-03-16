@@ -11,7 +11,7 @@ function Popular() {
   
     useEffect(() => {
       axios
-        .get("http://localhost:3000/popular")
+        .get("https://ecommerce-cyei.onrender.com/popular")
         .then((res) => setData(res.data))
         .catch((err) => console.log("err"));
     }, []);
