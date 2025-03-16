@@ -12,7 +12,7 @@ function NewCollection() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3000/bestsellers")
+            .get("https://ecommerce-cyei.onrender.com/bestsellers")
             .then((response) => setNewCollection(response.data))
             .catch((err) => console.log("error", err));
     }, []);
