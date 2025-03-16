@@ -22,7 +22,7 @@ const StoreContextProvider = (props) => {
    
 
     useEffect(() => {
-        axios.get("https://ecommerce-cyei.onrender.com/products")
+        axios.get("https://ecommerce-cyei.onrender.com/products/")
             .then((response) => {
                 console.log("✅ Fetched data:", response.data);
                 setContextvalue(response.data.map(item => ({ ...item, show: true })));
