@@ -1,4 +1,4 @@
-import "./home.css"
+import "./Home.css"
 
 import Header from "../../components/header/header"
 import Explore from "../../components/exploreproducts/Exploreproducts"
