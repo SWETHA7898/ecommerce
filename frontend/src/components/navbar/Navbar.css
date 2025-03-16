@@ -1,0 +1,194 @@
+.navbar img {
+  width: 50px;
+  border-radius: 50%;
+  
+}
+
+.navbar {
+  display: flex;
+  align-items: center;  /* Align items vertically */
+  justify-content: space-between;  /* Space between logo, menu, and buttons */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 15px 45px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  color: #A8DADC;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.header span {
+  color: #F28D8D;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.navmenu {
+  display: flex;
+  align-items: center;
+  gap: 25px;  /* Increased spacing for better readability */
+  list-style: none;
+  font-size: 22px;
+  color: #333333;
+}
+
+.navmenu .active {
+  border-bottom: 2px solid;
+}
+
+.navmenu li:hover {
+  cursor: pointer;
+}
+
+.navright {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Adjusted spacing */
+}
+
+.navright button {
+  background: transparent;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #A8DADC;
+  min-width: 120px;  /* Prevents button from shrinking */
+  text-align: center;
+}
+
+.navright button:active {
+  box-shadow: 4px 4px 10px rgba(168, 218, 220, 0.6);
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart .dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #F28D8D;
+  border-radius: 11px;
+  top: -8px;
+  right: -8px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  padding: 2px;
+}
+
+/* Navbar Dropdown for Small Screens */
+.nav-dropdown {
+  display: none;
+}
+
+.nav-dropdown.open {
+  transform: rotate(90deg);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 900px) {
+  .navbar {
+      padding: 12px 20px;
+  }
+
+  .header,
+  .header span {
+      font-size: x-large;
+  }
+
+  .navmenu {
+      gap: 15px;
+      font-size: 18px;
+  }
+
+  .navright {
+      gap: 20px;
+  }
+
+  .navright button {
+      padding: 8px 18px;
+      font-size: 16px;
+  }
+
+  .cart .dot {
+      top: -9px;
+      right: -12px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .header,
+  .header span {
+      font-size: large;
+  }
+
+  .nav-dropdown {
+      display: block;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      object-fit: contain;
+      rotate: -90deg;
+      transition: 0.5s;
+  }
+
+  .cart .dot {
+      top: -9px;
+      right: -12px;
+  }
+
+  .navmenu {
+      display: none;
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      background: transparent;
+      top: 45px;
+      justify-content: center;
+      z-index: 20;
+  }
+
+  .navmenu-visible {
+      display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+      gap: 0;
+  }
+
+  .header,
+  .header span {
+      font-size: x-large;
+  }
+
+  .nav-dropdown {
+      height: 25px;
+      width: 25px;
+  }
+
+  .cart .dot {
+      top: -9px;
+      right: -12px;
+  }
+}

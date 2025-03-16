@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container Class */
+.app {
+  width: 100%;
+  margin: auto;
+}
+
+

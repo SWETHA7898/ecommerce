@@ -1,0 +1,130 @@
+.cartitems{
+    margin: 100px 170px;
+
+}
+hr{
+    height: 3px;
+    border: 0;
+    background: #A8DADC;
+}
+.cartitems-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    padding: 10px 0px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 500;
+}
+.cart-products{
+    font-size: 16px;
+    font-weight: 500;
+}
+.cartimg{
+    height: 62px;
+}
+.remove-icon{
+    width: 15px;
+    cursor: pointer;
+    margin: 0px 40px;
+}
+.cart-quantity{
+    width: 54px;
+    height: 50px;
+    border: 2px solid #A8DADC;
+    background: #ffffff;
+}
+.cart-items-down{
+    display: flex;
+    margin: 100px 0px;
+}
+.cart-items-total{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap:40px;
+    margin-top: 40px;
+}
+.cart-items-total h1{
+    color: #333333;
+}
+.cart-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.cart-items-total button{
+    width: 262px;
+    height: 58px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #A8DADC;
+    border-radius: 5px;
+}
+
+@media(max-width:1024px){
+    .cartitems{
+       margin: 70px auto;
+    }
+    .cartitems-main{
+        grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: 20px;
+        padding: 15px 0px;
+        font-size: 15px;
+       
+    }
+    .cartimg{
+        height: 50px;
+    }
+    .remove-icon{
+        margin: auto;
+    }
+    .cart-quantity{
+        width: 40px;
+        height: 30px;
+    }
+    .cart-items-down{
+        
+        
+        margin: 80px 0px;
+        gap: 80px;
+    }
+    .cart-items-total{
+        margin: 0;
+    }
+    .cart-items-total button{
+        max-width: 200px;
+        height: 45px;
+        font-size: 13px;
+    }
+
+}
+
+@media(max-width:500px){
+    .cartitems{
+        margin: 90px auto;
+        padding: 10px;
+    }
+   
+    .cartitems-main{
+       
+        display: none;
+       
+       grid-template-columns: 0.5fr 3fr 0.5fr;
+       gap: 10px;
+       
+    }
+    .cart-products{
+        display: grid;
+    }
+    .remove-icon{
+        margin-right: 40px;
+    }
+    
+}
+

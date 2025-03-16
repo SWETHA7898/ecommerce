@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+     
+    background: white;
+      margin-bottom: 1px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    color: #A8DADC;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.header span{
+    color:#F28D8D;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+@media(max-width:800px){
+    .navbar{
+        padding: 15px 30px;
+    }
+    .header{
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .header span{
+        font-weight: 500;
+        font-size: x-large;
+    }
+    .img{
+        width: 20px;
+    }
+    p{
+        font-size: large;
+    }
+}
