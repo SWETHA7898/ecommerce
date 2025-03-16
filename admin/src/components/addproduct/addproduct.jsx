@@ -33,12 +33,12 @@ const Addproduct=()=>{
         let formData = new FormData();
         formData.append("product", image);
     
-        axios.post("http://localhost:3000/upload",formData).
+        axios.post("https://ecommerce-cyei.onrender.com/upload",formData).
         then((response)=>{
 
             console.log(response)
             productdetails.image=response.data.image_url
-             axios.post("http://localhost:3000/addproduct",productdetails)
+             axios.post("https://ecommerce-cyei.onrender.com/addproduct",productdetails)
             .then((data)=>{
                 console.log(data)
                 data.data.success?alert("Product added"):alert("Failed to add")
