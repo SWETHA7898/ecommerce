@@ -38,7 +38,7 @@ const Addproduct=()=>{
 
             console.log(response)
             productdetails.image=response.data.image_url
-             axios.post("https://ecommerce-cyei.onrender.com/addproduct",productdetails)
+             axios.post("https://ecommerce-cyei.onrender.com/products/add",productdetails)
             .then((data)=>{
                 console.log(data)
                 data.data.success?alert("Product added"):alert("Failed to add")
