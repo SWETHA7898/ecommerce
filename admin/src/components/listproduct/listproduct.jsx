@@ -7,7 +7,7 @@ const Listproduct = () => {
     const [allproducts, setproducts] = useState([]);
 
     const fetchinfo = async () => {
-        await axios.get("https://ecommerce-cyei.onrender.com/allproducts")
+        await axios.get("https://ecommerce-cyei.onrender.com/products/")
             .then((res) => {
                 console.log("Fetched Data:", res.data);
                 setproducts(res.data); // Store products in state
@@ -23,7 +23,7 @@ const Listproduct = () => {
 
     const remove = async (id) => {  
         console.log("Deleting product with ID:", id);
-        axios.delete(`https://ecommerce-cyei.onrender.com/removeproduct/${id}`)
+        axios.delete(`https://ecommerce-cyei.onrender.com/products/remove/${id}`)
         .then((res) => {
             console.log("Deleted:", res.data);
             fetchinfo(); 
