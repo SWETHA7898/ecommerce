@@ -22,7 +22,7 @@ const StoreContextProvider = (props) => {
    
 
     useEffect(() => {
-        axios.get("https://ecommerce-cyei.onrender.com/allproducts")
+        axios.get("https://ecommerce-cyei.onrender.com/products")
             .then((response) => {
                 console.log("✅ Fetched data:", response.data);
                 setContextvalue(response.data.map(item => ({ ...item, show: true })));
@@ -35,7 +35,7 @@ const StoreContextProvider = (props) => {
     }, []);
     useEffect(() => {
         if (localStorage.getItem("authToken")) {
-                        fetch("https://ecommerce-cyei.onrender.com/getcart", {
+                        fetch("https://ecommerce-cyei.onrender.com/cart/get", {
                             method: "POST",
                             headers: {
                                 Accept: 'application/form-data',
@@ -71,7 +71,7 @@ const StoreContextProvider = (props) => {
 
         // Send request to backend
         try {
-            const response = await fetch("https://ecommerce-cyei.onrender.com/addcart", {
+            const response = await fetch("https://ecommerce-cyei.onrender.com/cart/add", {
                 method: "POST",
                 headers: {
                     Accept: 'application/form-data',
@@ -95,7 +95,7 @@ const StoreContextProvider = (props) => {
             [itemId]: Math.max((prev[itemId] || 0) - 1, 0),
         }));
         if (localStorage.getItem("authToken")) {
-            fetch("https://ecommerce-cyei.onrender.com/removecart", {
+            fetch("https://ecommerce-cyei.onrender.com/cart/remove", {
                 method: "POST",
                 headers: {
                     Accept: 'application/form-data',
