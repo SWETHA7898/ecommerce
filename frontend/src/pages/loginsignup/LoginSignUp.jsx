@@ -34,7 +34,7 @@ function LoginSignUp() {
             const firebaseToken = await user.getIdToken();
     
             // Send token and user details to backend using Axios
-            const response = await axios.post("http://localhost:3000/signup", {
+            const response = await axios.post("https://ecommerce-cyei.onrender.com/signup", {
                 firebaseToken,
                 username: details.name,
                 email: details.email
