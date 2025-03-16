@@ -48,7 +48,7 @@ const handleOrderSubmit = async (e) => {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/placeorder", {
+        const response = await fetch("https://ecommerce-cyei.onrender.com/placeorder", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const razorPayment = (order) => {
             console.log("Received Payment Response:", response); // Debugging
         
             try {
-                const verifyResponse = await axios.post("http://localhost:3000/verify", {
+                const verifyResponse = await axios.post("https://ecommerce-cyei.onrender.com/verify", {
                     razorpay_payment_id: response.razorpay_payment_id,
                     razorpay_order_id: response.razorpay_order_id, // Ensure `order.id` is correct
                     razorpay_signature: response.razorpay_signature
